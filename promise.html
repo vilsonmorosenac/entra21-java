@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="executar()">executar promisse</button>
+    <p id="resultado"></p>
+    <script>
+       let promise = new Promise((res,err)=>{
+          let x = 1
+          if(x == 0){
+            res('Ok tudo certo')
+          }
+          else{
+            err('alles kaput')
+          }
+       }) 
+
+       function executar(){
+          promise.then(
+            data => showMessage(data),
+            erro => showMessage(erro))
+          //promisse.catch(erro => showMessage(erro))
+       }
+
+       function showMessage(message){
+          document.getElementById('resultado').innerHTML = message
+       }
+    </script>
+</body>
+</html>
