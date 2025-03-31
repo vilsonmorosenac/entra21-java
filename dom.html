@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="um">um</p>
+    <p>dois</p>
+    <p>tres</p>
+    
+    <input type="text" />
+    <button onclick="document.getElementsByTagName('input')[1].value =  document.getElementsByTagName('input')[0].value">Trocar</button>
+    <input type="text" disabled/>
+    
+    <script>
+        document.getElementById('um').innerHTML = 'ola um'
+
+        var ps = document.getElementsByTagName('p')[1].innerHTML = 'ola dois'
+
+        function trocar(){
+            document.getElementsByTagName('input')[1].value =  document.getElementsByTagName('input')[0].value
+        }
+        
+    </script>
+</body>
+</html>
